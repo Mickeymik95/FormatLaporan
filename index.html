@@ -436,23 +436,23 @@
                     }
                     return `*Assalamualaikum wbt & Salam Sejahtera YDH Tuan,*\n\n` +
                         `Laporan penugasan anggota bertugas Aliran Kelana Jaya Jabatan Sekuriti.\n\n` +
-                        `*TARIKH :* ${tarikh}\n` +
-                        `*MASA :* ${masaHRS}\n` +
-                        `*TUGASAN :* KAWALAN DAN PEMANTAUAN DI PLATFORM 1,2\n` +
-                        `*LOKASI :* STESEN LRT *${stesen.toUpperCase()}* (KJL)\n\n` +
+                        `TARIKH : ${tarikh}\n` +
+                        `MASA : ${masaHRS}\n` +
+                        `TUGASAN : KAWALAN DAN PEMANTAUAN DI PLATFORM 1,2\n` +
+                        `LOKASI : STESEN LRT *${stesen.toUpperCase()}* (KJL)\n\n` +
                         `${senarai}\n\n` +
                         `*ANGGOTA BERTUGAS :*\n` +
                         `*${anggota}*\n\n` +
-                        `#TeruskanPerkaraBaik`;
+                        `*#TERUSKAN PERKARA BAIK*`;
                 },
 
                 peak: () => {
                     let isiLaporan = localStorage.getItem("laporan_peak") || (typeof tetapanLaporan !== "undefined" ? tetapanLaporan.peak.defaultText : "");
                     return `*Update Terkini :*\n\n` +
-                        `*Tarikh :* ${tarikh}\n` +
-                        `*Stesen :* *${stesen.toUpperCase()}*\n` +
-                        `*Masa :* ${now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}\n\n` +
-                        `*Status :* ${isiLaporan.toUpperCase()}`;
+                        `Tarikh : ${tarikh}\n` +
+                        `Stesen : *${stesen.toUpperCase()}*\n` +
+                        `Masa : ${now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}\n\n` +
+                        `*Status : ${isiLaporan.toUpperCase()}*`;
                 },
 
                 kejadian: () => {
@@ -469,14 +469,14 @@
                     }
                     return `*Assalamualaikum wbt & Salam Sejahtera YDH Tuan,*\n\n` +
                         `Laporan penugasan anggota bertugas Aliran Kelana Jaya Jabatan Sekuriti.\n\n` +
-                        `*TARIKH :* ${tarikh}\n` +
-                        `*MASA :* ${masaHRS}\n` +
-                        `*TUGASAN :* LAPORAN KEJADIAN SEMASA DI STESEN\n` +
-                        `*LOKASI :* STESEN LRT *${stesen.toUpperCase()}* (KJL)\n\n` +
+                        `TARIKH : ${tarikh}\n` +
+                        `MASA : ${masaHRS}\n` +
+                        `TUGASAN : LAPORAN KEJADIAN SEMASA DI STESEN\n` +
+                        `LOKASI : STESEN LRT *${stesen.toUpperCase()}* (KJL)\n\n` +
                         `${senaraiKejadian}\n` +
-                        `*ANGGOTA BERTUGAS :*\n` +
+                        `ANGGOTA BERTUGAS :\n` +
                         `*${anggota}*\n\n` +
-                        `#TeruskanPerkaraBaik`;
+                        `*#TERUSKAN PERKARA BAIK*`;
                 },
 
                 oku: () => {
@@ -518,14 +518,14 @@
 
                     return `*Assalamualaikum wbt & Salam Sejahtera YDH Tuan,*\n\n` +
                         `Laporan penugasan anggota bertugas Aliran Kelana Jaya Jabatan Sekuriti.\n\n` +
-                        `*TARIKH :* ${tarikh}\n` +
-                        `*MASA :* ${masaHRS}\n` +
-                        `*TUGASAN :* RONDAAN STESEN\n` +
-                        `*LOKASI :* STESEN LRT *${namaStesen}* (KJL)\n\n` +
+                        `TARIKH : ${tarikh}\n` +
+                        `MASA : ${masaHRS}\n` +
+                        `TUGASAN : RONDAAN STESEN\n` +
+                        `LOKASI : STESEN LRT *${namaStesen}* (KJL)\n\n` +
                         `${senaraiPenutup}\n\n` +
-                        `*ANGGOTA BERTUGAS :*\n` +
+                        `ANGGOTA BERTUGAS :\n` +
                         `*${senaraiAnggota}*\n\n` +
-                        `#TeruskanPerkaraBaik`;
+                        `#TERUSKAN PERKARA BAIK*`;
                 },
 
                 cucian: () => {
@@ -537,16 +537,16 @@
 
                     return `*Assalamualaikum wbt & Salam Sejahtera YDH Tuan,*\n\n` +
                         `Laporan penugasan anggota bertugas Aliran Kelana Jaya Jabatan Sekuriti.\n\n` +
-                        `*TARIKH :* ${tarikh}\n` +
-                        `*MASA :* ${masaHRS}\n` +
-                        `*TUGASAN :* PERIKSA KEMASUKAN KONTRAKTOR\n` +
-                        `*LOKASI :* STESEN LRT *${namaStesen}* (KJL)\n\n` +
-                        `1. Kehadiran *${jumlah}* kontraktor pembersihan syarikat *${syarikat}* tujuan kerja-kerja cucian stesen.\n` +
+                        `TARIKH : ${tarikh}\n` +
+                        `MASA : ${masaHRS}\n` +
+                        `TUGASAN : PERIKSA KEMASUKAN KONTRAKTOR\n` +
+                        `LOKASI : STESEN LRT *${namaStesen}* (KJL)\n\n` +
+                        `1. Kehadiran *${jumlah}x* kontraktor pembersihan syarikat *${syarikat}* tujuan kerja-kerja cucian stesen.\n` +
                         `2. Semakan Pas Kontraktor serta Work Permit masih dalam tempoh sah laku.\n` +
                         `3. Tiada sebarang penyamaran / perkara mencurigakan, sekian.\n\n` +
                         `ANGGOTA BERTUGAS :\n` +
-                        `*${namaAnggota}*\n\n` +
-                        `#TeruskanPerkaraBaik`;
+                        `${namaAnggota}\n\n` +
+                        `*#TERUSKAN PERKARA BAIK*`;
                 },
 
                 kontraktor: () => {
@@ -573,16 +573,16 @@
 
                     return `*Assalamualaikum wbt & Salam Sejahtera YDH Tuan,*\n\n` +
                         `Laporan penugasan anggota bertugas Aliran Kelana Jaya Jabatan Sekuriti.\n\n` +
-                        `*TARIKH :* ${tarikh}\n` +
-                        `*MASA :* ${masaHRS}\n` +
-                        `*TUGASAN :* PEMERIKSAAN KEMASUKAN KONTRAKTOR\n` +
-                        `*LOKASI :* STESEN LRT *${namaStesen}* (KJL)\n\n` +
+                        `TARIKH : ${tarikh}\n` +
+                        `MASA : ${masaHRS}\n` +
+                        `TUGASAN : PEMERIKSAAN KEMASUKAN KONTRAKTOR\n` +
+                        `LOKASI : STESEN LRT *${namaStesen}* (KJL)\n\n` +
                         `1. Lapor kemasukan *${jumlah}* kontraktor *${syarikat}*.\n` +
                         `2. Masuk membuat kerja-kerja *${tujuan}* stesen *${namaStesen}*.\n` +
                         `${barisPas}\n\n` +
                         `ANGGOTA BERTUGAS :\n` +
                         `*${namaAnggota}*\n\n` +
-                        `#TeruskanPerkaraBaik`;
+                        `#TERUSKAN PERKARA BAIK*`;
                 }
             };
 
