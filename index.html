@@ -77,13 +77,10 @@
                 🚨 BORANG REDMIKE
             </button>
 
-            <hr class="border-gray-300">
-            <h3 class="font-bold text-gray-900 text-lg">📋 Jenis Laporan</h3>
-
             <!-- CARDS LAPORAN -->
             <div class="p-4 rounded-2xl bg-green-50 border border-green-200">
                 <p class="font-bold text-green-900">📋 LAPORAN HARIAN</p>
-                <div class="grid grid-cols-2 gap-2 mt-4">
+                <div class="grid grid-cols-2 gap-1.5 mt-2">
                     <button class="bg-green-600 text-white p-3 rounded-xl font-bold hover:bg-green-700 transition">📤
                         WhatsApp</button>
                     <button
@@ -94,7 +91,7 @@
 
             <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200">
                 <p class="font-bold text-amber-900">⚠️ LAPORAN PEAK HOUR</p>
-                <div class="grid grid-cols-2 gap-2 mt-4">
+                <div class="grid grid-cols-2 gap-1.5 mt-2">
                     <button class="bg-amber-500 text-white p-3 rounded-xl font-bold hover:bg-amber-600 transition">📤
                         WhatsApp</button>
                     <button
@@ -105,7 +102,7 @@
 
             <div class="p-4 rounded-2xl bg-red-50 border border-red-200">
                 <p class="font-bold text-red-900">🚨 LAPORAN KEJADIAN</p>
-                <div class="grid grid-cols-2 gap-2 mt-4">
+                <div class="grid grid-cols-2 gap-1.5 mt-2">
                     <button class="bg-red-600 text-white p-3 rounded-xl font-bold hover:bg-red-700 transition">📤
                         WhatsApp</button>
                     <button class="bg-red-200 text-red-900 p-3 rounded-xl font-bold hover:bg-red-300 transition">⚙️
@@ -115,7 +112,7 @@
 
             <div class="p-4 rounded-2xl bg-purple-50 border border-purple-200">
                 <p class="font-bold text-purple-900">♿ BANTUAN OKU</p>
-                <div class="grid grid-cols-2 gap-2 mt-4">
+                <div class="grid grid-cols-2 gap-1.5 mt-2">
                     <button class="bg-purple-600 text-white p-3 rounded-xl font-bold hover:bg-purple-700 transition">📤
                         WhatsApp</button>
                     <button
@@ -126,7 +123,7 @@
 
             <div class="p-4 rounded-2xl bg-indigo-50 border border-indigo-200">
                 <p class="font-bold text-indigo-900">🏁 TAMAT OPERASI</p>
-                <div class="grid grid-cols-2 gap-2 mt-4">
+                <div class="grid grid-cols-2 gap-1.5 mt-2">
                     <button class="bg-indigo-600 text-white p-3 rounded-xl font-bold hover:bg-indigo-700 transition">📤
                         WhatsApp</button>
                     <button
@@ -137,7 +134,7 @@
 
             <div class="p-4 rounded-2xl bg-cyan-50 border border-cyan-200">
                 <p class="font-bold text-cyan-900">🧹 KONTRAKTOR CUCIAN</p>
-                <div class="grid grid-cols-2 gap-2 mt-4">
+                <div class="grid grid-cols-2 gap-1.5 mt-2">
                     <button class="bg-cyan-600 text-white p-3 rounded-xl font-bold hover:bg-cyan-700 transition">📤
                         WhatsApp</button>
                     <button class="bg-cyan-200 text-cyan-900 p-3 rounded-xl font-bold hover:bg-cyan-300 transition">⚙️
@@ -147,7 +144,7 @@
 
             <div class="p-4 rounded-2xl bg-orange-50 border border-orange-200">
                 <p class="font-bold text-orange-900">🛠️ KONTRAKTOR AM</p>
-                <div class="grid grid-cols-2 gap-2 mt-4">
+                <div class="grid grid-cols-2 gap-1.5 mt-2">
                     <button class="bg-orange-600 text-white p-3 rounded-xl font-bold hover:bg-orange-700 transition">📤
                         WhatsApp</button>
                     <button
@@ -158,7 +155,7 @@
         </div>
 
         <footer class="text-center text-gray-500 text-xs py-2">
-            Sistem Laporan Pantas v3.0 | Jabatan Sekuriti Aliran Kelana Jaya
+            Sistem Laporan Pantas v3.0 | Aliran Kelana Jaya | by Kons PB Nazmi
         </footer>
     </div>
 
@@ -228,7 +225,7 @@
                 </div>
                 <div>
                     <label class="font-bold text-gray-700 text-xs uppercase">Tujuan Kemasukan :</label>
-                    <input type="text" id="amTujuan" placeholder="Contoh: BUAT DAWAI"
+                    <input type="text" id="amTujuan" placeholder="Contoh: Membaiki suis lampu dll..."
                         class="w-full mt-1 p-2.5 border rounded-xl uppercase font-mono text-sm focus:ring-2 focus:ring-orange-500 outline-none">
                 </div>
                 <div>
@@ -238,7 +235,7 @@
                 </div>
                 <div>
                     <label class="font-bold text-gray-700 text-xs uppercase">Staff Pemantau :</label>
-                    <input type="text" id="amStaff" placeholder="Contoh: 10005576 (SHAMSURI)"
+                    <input type="text" id="amStaff" placeholder="Contoh: 10005576 (Ali)"
                         class="w-full mt-1 p-2.5 border rounded-xl uppercase font-mono text-sm focus:ring-2 focus:ring-orange-500 outline-none">
                 </div>
                 <div>
@@ -275,10 +272,12 @@
 
         const tetapanLaporan = {
             harian: { tajuk: "📋 EDIT LAPORAN HARIAN", warna: "bg-green-600", placeholder: "Masukkan laporan tambahan...", defaultText: "", label: "Kandungan / Laporan Tambahan" },
-            peak: { tajuk: "⚠️ EDIT LAPORAN PEAK HOUR", warna: "bg-amber-500", placeholder: "Contoh:\nSESAK DI PLATFORM 2", defaultText: "KEADAAN STESEN BERSESAK TETAPI KAWALAN DAN PEMANTAUAN BERJALAN LANCAR DAN TERKAWAL.", label: "Status Peak Hour" },
-            kejadian: { tajuk: "🚨 EDIT LAPORAN KEJADIAN", warna: "bg-red-600", placeholder: "Contoh:\n1. HILANG TELFON\n2. MAKMUM ICC\n3. BANTUAN CSA", defaultText: "1. HILANG TELFON\n2. MAKMUM ICC\n3. BANTUAN CSA", label: "Senarai Kejadian" },
+            peak: { tajuk: "⚠️ EDIT LAPORAN PEAK HOUR", warna: "bg-amber-500", placeholder: "Contoh:\nSESAK DI PLATFORM 1", defaultText: "BAIK & TERKAWAL", label: "Status Peak Hour" },
+            kejadian: {
+                tajuk: "🚨 EDIT LAPORAN KEJADIAN", warna: "bg-red-600", placeholder: "ayat pertama menjadi no 1. , Tekan enter akan jadi no 2. dan seterusnya didalam laporan, contoh:\n1.\n2.", defaultText: "1. HILANG TELFON\n2.MAKMUM ICC\n3.BANTUAN CSA", label: "Senarai Kejadian"
+            },
             oku: { tajuk: "♿ BANTUAN OKU", warna: "bg-purple-600" },
-            tamat: { tajuk: "🏁 EDIT TAMAT OPERASI", warna: "bg-indigo-600", placeholder: "Masukkan perkara tambahan (Mula nombor 4)...\nContoh:\nLOKASI BEBAS DARI BARANG MENCURIGAKAN", defaultText: "", label: "Laporan Tambahan (Bermula Nombor 4):" },
+            tamat: { tajuk: "🏁 EDIT TAMAT OPERASI", warna: "bg-indigo-600", placeholder: "Masukkan perkara tambahan akan bermula nombor 4 dalam laporan...\nContoh:\nKontraktor cucian sedang menjalankan kerja", defaultText: "", label: "Laporan Tambahan (Bermula Nombor 4):" },
             cucian: { tajuk: "🧹 EDIT KONTRAKTOR CUCIAN", warna: "bg-cyan-600" },
             kontraktor: { tajuk: "🛠️ EDIT KONTRAKTOR AM", warna: "bg-orange-600" }
         };
@@ -415,9 +414,9 @@
                 ? anggotaElem.value
                     .split("\n")
                     .filter(x => x.trim() !== "")
-                    .map(x => x.trim().toUpperCase())
+                    .map(x => `*${x.trim().toUpperCase()}*`)
                     .join("\n")
-                : "KONS PB NAZMI";
+                : "*KONS PB NAZMI*";
 
             const now = new Date();
             const tarikh = now.toLocaleDateString('en-GB');
@@ -442,7 +441,7 @@
                         `LOKASI : STESEN LRT *${stesen.toUpperCase()}* (KJL)\n\n` +
                         `${senarai}\n\n` +
                         `ANGGOTA BERTUGAS :\n` +
-                        `*${anggota}*\n\n` +
+                        `${anggota}\n\n` +
                         `*#TERUSKAN PERKARA BAIK*`;
                 },
 
@@ -475,7 +474,7 @@
                         `LOKASI : STESEN LRT *${stesen.toUpperCase()}* (KJL)\n\n` +
                         `${senaraiKejadian}\n` +
                         `ANGGOTA BERTUGAS :\n` +
-                        `*${anggota}*\n\n` +
+                        `${anggota}\n\n` +
                         `*#TERUSKAN PERKARA BAIK*`;
                 },
 
@@ -491,9 +490,9 @@
                         pintu = "Door " + pintu;
                     }
 
-                    return `◇ *OKU* - *${singkatanAsal}* ➡️  *${stesenTujuanText}*\n` +
-                        `◇ *Platform* - *${platform}*\n` +
-                        `◇ *Tren Id* *${trenId}* - *${pintu}*`;
+                    return `*◇ OKU - ${singkatanAsal} ➡️  ${stesenTujuanText}*\n` +
+                        `*◇ Platform - ${platform}*\n` +
+                        `*◇ Tren Id ${trenId} - ${pintu}*`;
                 },
 
                 tamat: () => {
@@ -524,7 +523,7 @@
                         `LOKASI : STESEN LRT *${namaStesen}* (KJL)\n\n` +
                         `${senaraiPenutup}\n\n` +
                         `ANGGOTA BERTUGAS :\n` +
-                        `*${senaraiAnggota}*\n\n` +
+                        `${senaraiAnggota}\n\n` +
                         `*#TERUSKAN PERKARA BAIK*`;
                 },
 
@@ -545,7 +544,7 @@
                         `2. Semakan Pas Kontraktor serta Work Permit masih dalam tempoh sah laku.\n` +
                         `3. Tiada sebarang penyamaran / perkara mencurigakan, sekian.\n\n` +
                         `ANGGOTA BERTUGAS :\n` +
-                        `*${namaAnggota}*\n\n` +
+                        `${namaAnggota}\n\n` +
                         `*#TERUSKAN PERKARA BAIK*`;
                 },
 
@@ -581,7 +580,7 @@
                         `2. Masuk membuat kerja-kerja *${tujuan}.*\n` +
                         `${barisPas}\n\n` +
                         `ANGGOTA BERTUGAS :\n` +
-                        `*${namaAnggota}*\n\n` +
+                        `${namaAnggota}\n\n` +
                         `*#TERUSKAN PERKARA BAIK*`;
                 }
             };
