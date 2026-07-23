@@ -31,10 +31,10 @@
     </style>
 </head>
 
-<body class="bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800 min-h-screen p-4 md:p-8">
-    <div class="max-w-lg mx-auto space-y-6">
+<body class="bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800 min-h-screen p-2 md:p-4">
+    <div class="max-w-lg mx-auto space-y-3">
         <!-- HEADER -->
-        <div class="text-center text-white pt-5 pb-4 border-b border-gray-700">
+        <div class="text-center text-white pt-2 pb-2 border-b border-gray-700">
             <h1 class="text-3xl font-black tracking-wide">FORMAT LAPORAN PENUGASAN</h1>
             <a href="https://wa.me/60123456789" target="_blank" id="btnWaNazmi"
                 class="inline-block mt-4 bg-green-500 hover:bg-green-600 transition text-white px-5 py-3 rounded-full font-bold shadow-lg">
@@ -44,14 +44,14 @@
         </div>
 
         <!-- BORANG UTAMA -->
-        <div class="glass rounded-3xl p-6 shadow-2xl space-y-6">
+        <div class="glass rounded-2xl p-3 shadow-xl space-y-3">
             <h3 class="font-bold text-gray-900 text-lg">📍 Maklumat Penugasan</h3>
 
             <!-- STESEN -->
             <div>
                 <label class="text-xs font-bold text-gray-600 uppercase">Pilih Stesen Hari Ini</label>
                 <select id="stesen"
-                    class="w-full mt-2 p-3 rounded-xl border bg-white/80 font-medium focus:ring-2 focus:ring-blue-500 outline-none">
+                    class="w-full mt-2 py-2 px-3 rounded-xl border bg-white/80 font-medium focus:ring-2 focus:ring-blue-500 outline-none">
                     <option value="">-- SILA PILIH STESEN --</option>
                     <option value="ABDULLAH HUKUM">ABDULLAH HUKUM</option>
                     <option value="KERINCHI">KERINCHI</option>
@@ -68,7 +68,7 @@
             <div>
                 <label class="text-xs font-bold text-gray-600 uppercase">Nama Anggota Bertugas</label>
                 <textarea id="anggota" rows="4" placeholder="Contoh:&#10;LKPL PB ALI&#10;KONS PB AHMAD&#10;KPL PB AZMAN"
-                    class="w-full mt-2 p-3 rounded-xl border uppercase bg-white/80 font-mono text-sm focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+                    class="w-full mt-2 py-2 px-3 rounded-xl border uppercase bg-white/80 font-mono text-sm focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
             </div>
 
             <!-- REDMIKE -->
@@ -427,7 +427,7 @@
             const formatBerbeza = {
                 harian: () => {
                     let isiLaporan = localStorage.getItem("laporan_harian") || "";
-                    let senarai = "1. LAPOR KAWALAN DAN PEMANTAUAN DI PLATFORM.\n2. PERGERAKAN PENUMPANG KELUAR MASUK TREN LANCAR.\n3. PERKHIDMATAN TREN BEROPERASI SEPERTI BIASA.";
+                    let senarai = '1. LAPOR KAWALAN DAN PEMANTAUAN DI PLATFORM STESEN ' + '*' + stesen.toUpperCase() + '*' + '.\n2. PERGERAKAN PENUMPANG KELUAR MASUK TREN LANCAR.\n3. PERKHIDMATAN TREN BEROPERASI SEPERTI BIASA.';
                     if (isiLaporan.trim() !== "") {
                         let no = 4;
                         isiLaporan.split("\n").forEach(baris => {
@@ -491,7 +491,7 @@
                         pintu = "Door " + pintu;
                     }
 
-                    return `◇ *OKU* - *${singkatanAsal}* > *${stesenTujuanText}*\n` +
+                    return `◇ *OKU* - *${singkatanAsal}* ➡️  *${stesenTujuanText}*\n` +
                         `◇ *Platform* - *${platform}*\n` +
                         `◇ *Tren Id* *${trenId}* - *${pintu}*`;
                 },
@@ -502,7 +502,7 @@
                     let senaraiAnggota = anggota ? anggota.toUpperCase() : "";
 
                     let senaraiPenutup =
-                        `1. RONDAAN DAN PEMANTAUAN SEKITAR KAWASAN STESEN SELEPAS TAMAT OPERASI TREN BAGI ${namaStesen} (KJL).\n` +
+                        `1. RONDAAN DAN PEMANTAUAN SEKITAR KAWASAN STESEN SELEPAS TAMAT OPERASI TREN BAGI STESEN *${namaStesen}* (KJL).\n` +
                         "2. KAWASAN CONCOURSE, KIOSK, TANDAS, SURAU, BILIK JANITOR, ER, CSO, TANGGA KECEMASAN DAN PLATFORM.\n" +
                         "3. SELESAI RONDAAN LOKASI BAIK, SERTA TIADA KELIBAT PENUMPANG DIDALAM STESEN DAN KEADAAN TERKAWAL.";
 
@@ -545,7 +545,7 @@
                         `2. Semakan Pas Kontraktor serta Work Permit masih dalam tempoh sah laku.\n` +
                         `3. Tiada sebarang penyamaran / perkara mencurigakan, sekian.\n\n` +
                         `ANGGOTA BERTUGAS :\n` +
-                        `${namaAnggota}\n\n` +
+                        `*${namaAnggota}*\n\n` +
                         `*#TERUSKAN PERKARA BAIK*`;
                 },
 
@@ -577,8 +577,8 @@
                         `MASA : ${masaHRS}\n` +
                         `TUGASAN : PEMERIKSAAN KEMASUKAN KONTRAKTOR\n` +
                         `LOKASI : STESEN LRT *${namaStesen}* (KJL)\n\n` +
-                        `1. Lapor kemasukan *${jumlah}* kontraktor *${syarikat}*.\n` +
-                        `2. Masuk membuat kerja-kerja *${tujuan}* stesen *${namaStesen}*.\n` +
+                        `1. Lapor kemasukan *${jumlah}x* kontraktor *${syarikat}*.\n` +
+                        `2. Masuk membuat kerja-kerja *${tujuan}.*\n` +
                         `${barisPas}\n\n` +
                         `ANGGOTA BERTUGAS :\n` +
                         `*${namaAnggota}*\n\n` +
