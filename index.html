@@ -444,7 +444,7 @@
             const formatBerbeza = {
                 harian: () => {
                     let isiLaporan = localStorage.getItem("laporan_harian") || "";
-                    let senarai = '1. LAPOR KAWALAN DAN PEMANTAUAN DI PLATFORM STESEN ' + '*' + stesen.toUpperCase() + ' (KJL)' + '*' + '.\n2. PERGERAKAN PENUMPANG KELUAR MASUK TREN LANCAR.\n3. PERKHIDMATAN TREN BEROPERASI SEPERTI BIASA.';
+                    let senarai = '1. LAPOR KAWALAN DAN PEMANTAUAN DI PLATFORM STESEN ' + '*' + stesen.toUpperCase()+'*'+' (KJL)'  + '.\n2. PERGERAKAN PENUMPANG KELUAR MASUK TREN LANCAR.\n3. PERKHIDMATAN TREN BEROPERASI SEPERTI BIASA.';
                     if (isiLaporan.trim() !== "") {
                         let no = 4;
                         isiLaporan.split("\n").forEach(baris => {
