@@ -287,7 +287,7 @@
             harian: { tajuk: "📋 EDIT LAPORAN BIASA", warna: "bg-green-600", placeholder: "tambah disini akan menjadi no. 4 dalam laporan\nCth : 4. Platform 1 bypass", defaultText: "", label: "Kandungan / Laporan Tambahan" },
             peak: { tajuk: "⚠️ EDIT LAPORAN PEAK HOUR", warna: "bg-amber-500", placeholder: "Biarkan kosong jika status 'BAIK & TERKAWAL'", defaultText: "BAIK & TERKAWAL", label: "Status Peak Hour" },
             kejadian: {
-                tajuk: "🚨 EDIT LAPORAN KEJADIAN", warna: "bg-red-600", placeholder: "ayat pertama menjadi no 1. , Tekan enter akan jadi no 2. dan seterusnya didalam laporan, contoh:\n1.\n2.", defaultText: "1. HILANG TELFON\n2.MAKMUM ICC\n3.BANTUAN CSA", label: "Senarai Kejadian"
+                tajuk: "🚨 EDIT LAPORAN KEJADIAN", warna: "bg-red-600", placeholder: "ayat pertama menjadi no 1. , Tekan enter akan jadi no 2. dan seterusnya didalam laporan, contoh:\n1.\n2.", defaultText: "", label: "Senarai Kejadian"
             },
             oku: { tajuk: "♿ BANTUAN OKU", warna: "bg-purple-600" },
             tamat: { tajuk: "🏁 EDIT TAMAT OPERASI", warna: "bg-indigo-600", placeholder: "Masukkan perkara tambahan akan bermula nombor 4 dalam laporan...\nContoh:\nKontraktor cucian sedang menjalankan kerja", defaultText: "", label: "Laporan Tambahan (Bermula Nombor 4):" },
@@ -444,7 +444,7 @@
             const formatBerbeza = {
                 harian: () => {
                     let isiLaporan = localStorage.getItem("laporan_harian") || "";
-                    let senarai = '1. LAPOR KAWALAN DAN PEMANTAUAN DI PLATFORM STESEN ' + '*' + stesen.toUpperCase() + '*' + '.\n2. PERGERAKAN PENUMPANG KELUAR MASUK TREN LANCAR.\n3. PERKHIDMATAN TREN BEROPERASI SEPERTI BIASA.';
+                    let senarai = '1. LAPOR KAWALAN DAN PEMANTAUAN DI PLATFORM STESEN ' + '*' + stesen.toUpperCase() + ' (KJL)' + '*' + '.\n2. PERGERAKAN PENUMPANG KELUAR MASUK TREN LANCAR.\n3. PERKHIDMATAN TREN BEROPERASI SEPERTI BIASA.';
                     if (isiLaporan.trim() !== "") {
                         let no = 4;
                         isiLaporan.split("\n").forEach(baris => {
